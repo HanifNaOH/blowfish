@@ -10,3 +10,6 @@
 {{ with site.Params.selineAnalytics.token }}
 {{ partial "analytics/seline.html" }}
 {{ end }}
+{{ with site.Params.posthog }}
+  {{ partial "analytics/posthog.html" . }}
+{{ end }}
