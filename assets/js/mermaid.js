@@ -29,3 +29,19 @@ mermaid.initialize({
     fontSize: "16px",
   },
 });
+
+// Register Icon Packs using Iconify JSON via CDN
+if (typeof mermaid.registerIconPacks === 'function') {
+  mermaid.registerIconPacks([
+    {
+      name: 'logos',
+      loader: () =>
+        fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then(res => res.json()),
+    },
+    {
+      name: 'devicon',
+      loader: () =>
+        fetch('https://unpkg.com/@iconify-json/devicon@1/icons.json').then(res => res.json()),
+    },
+  ]);
+}

@@ -73,3 +73,8 @@
 <link rel="stylesheet" href="{{ $youtubeLiteCSS.RelPermalink }}" integrity="{{ $youtubeLiteCSS.Data.Integrity }}"/>
 <script src="{{ $youtubeLiteJS.RelPermalink }}" integrity="{{ $youtubeLiteJS.Data.Integrity }}"></script>
 {{ end }}
+
+{{/* Icones.js */}}
+{{ if .Page.HasShortcode "icones" }}
+<script defer type="module" src="https://unpkg.com/icones?module"></script>
+{{ end }}

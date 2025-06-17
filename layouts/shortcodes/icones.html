@@ -1,0 +1,4 @@
+{{- $name := .Get "name" -}}
+{{- $pack := .Get "pack" | default "mdi" -}}
+{{- $style := .Get "style" | default "" -}}
+<icones-icon name="{{ $name }}" pack="{{ $pack }}" style="{{ $style }}"></icones-icon>
